@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/coronavirus",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -73,6 +73,12 @@
           }
         },
         "test": {
+          "fileReplacements": [
+            {
+              "replace": "src/environments/environment.ts",
+              "with": "src/environments/environment.test.ts"
+            }
+          ],
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
@@ -113,8 +119,13 @@
               "devServerTarget": "coronavirus:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "coronavirus"
 }

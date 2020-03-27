@@ -1,0 +1,14 @@
+.relative1 {
+    position: relative;
+    border: 1px solid orange;
+    height: 300px;
+}
+
+.relative2 {
+    border: 1px solid red;
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}

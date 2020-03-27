@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "wassim-6a66b"
+  },
+  "targets": {
+    "wassim-6a66b": {
+      "hosting": {
+        "coronavirus": [
+          "wassim-6a66b"
+        ]
+      }
+    }
+  }
+}
