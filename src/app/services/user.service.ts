@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/firestore';
 import * as firebase from 'firebase';
 import { Observable, of, Subject } from 'rxjs';
@@ -12,9 +12,9 @@ export class UserService {
     save(user: firebase.User) {
         let exist = false;
         this.db.collection('/users/').get().subscribe(users => {
-            users.docs.map(doc => {
+            users.docs.forEach(doc => {
                 const data = doc.data();
-                if (data.email == user.email) {
+                if (data.email === user.email) {
                     exist = true;
                 }
             });
@@ -27,7 +27,7 @@ export class UserService {
         });
     }
 
-    userRole(){
+    userRole() {
         return true;
     }
 

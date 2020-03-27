@@ -11,8 +11,8 @@ import { Router } from '@angular/router';
 export class AppComponent implements DoCheck, OnInit {
   count = 0;
   constructor(private authService: AuthService,
-    private userService: UserService,
-    private zone: NgZone) {
+              private userService: UserService,
+              private zone: NgZone) {
 
     this.authService.user$.subscribe(user => {
       if (user) {
